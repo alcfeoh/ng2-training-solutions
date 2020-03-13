@@ -6,7 +6,6 @@ import {RouterModule} from "@angular/router";
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello/hello.component';
 import { routing } from './app.routing';
-import { JasmineTestComponent } from './jasmine-test/jasmine-test.component';
 import {AuthGuard} from "./router/auth-guard-service";
 import {LoginService} from "./router/login/login.service";
 import {LoginComponent} from "./router/login/login.component";
@@ -29,7 +28,6 @@ import { JumbotronComponent } from './jumbotron/jumbotron.component';
   declarations: [
     AppComponent, HelloComponent, LicensePlateComponent,
     EvenUppercasePipe,
-    JasmineTestComponent,
     LoginComponent,
     PopupWindowComponent, LoaderComponent, HeaderComponent,
     LoaderViewChildComponent,
