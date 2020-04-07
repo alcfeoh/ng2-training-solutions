@@ -1,0 +1,15 @@
+<StackLayout margin="10" borderRadius="10" backgroundColor="#dcdcdc">
+    <StackLayout orientation="horizontal">
+        <Label [text]="plate.title" class="item-name"></Label>
+        <Image src="https://store.angulartraining.com/assets/sale.png"
+               *ngIf="plate.onSale" width="120px"></Image>
+    </StackLayout>
+    <Image [src]="plate.picture" width="90%"></Image>
+    <StackLayout>
+        <Label [text]="plate.description" class="item-desc" textWrap="true"></Label>
+        <FlexboxLayout>
+            <Label text="{{plate.price | currency: 'USD':'symbol':'1.0-2'}}" class="item-price" flexGrow="1"></Label>
+            <Button [text]="buttonText" (tap)="buttonClicked()"></Button>
+        </FlexboxLayout>
+    </StackLayout>
+</StackLayout>

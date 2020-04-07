@@ -1,0 +1,9 @@
+<ScrollView orientation="vertical" row="1">
+    <StackLayout>
+        <Label *ngIf="(licensePlates$ | async).length == 0" text="Your cart is empty" backgroundColor="#87cefa" color="white" textAlignment="center" fontSize="24px"></Label>
+        <ns-license-plate *ngFor="let myPlate of licensePlates$ | async"
+                          [plate]="myPlate" buttonText="Remove"
+                          (buttonClick)="cartService.removeFromCart(myPlate)">
+        </ns-license-plate>
+    </StackLayout>
+</ScrollView>
