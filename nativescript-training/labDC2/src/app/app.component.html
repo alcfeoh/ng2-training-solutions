@@ -1,0 +1,50 @@
+<!--
+The template defines the view of the component - what is actually rendered.
+In NativeScript applications the template is defined with XML using NativeScript UI elements.
+It is different from HTML. So instead of <input>, <span>, <div> etc. - we have <TextField>, <Label> and layouts.
+The important thing is that although the elements are different - all of the Angular’s template syntax works exactly the same.
+So you can still use template expressions, bindings, templates as well as all the built-in directives.
+-->
+<ActionBar title="License Plate Store"></ActionBar>
+<BottomNavigation>
+    <TabStrip>
+        <TabStripItem>
+            <Label text="Home"></Label>
+            <Image src="font://&#xf015;" class="fas t-36"></Image>
+        </TabStripItem>
+        <TabStripItem>
+            <Label text="Cart"></Label>
+            <Image src="font://&#xf07a;" class="fas t-36"></Image>
+        </TabStripItem>
+        <TabStripItem>
+            <Label text="Checkout"></Label>
+            <Image src="font://&#xf155;" class="fas t-36"></Image>
+        </TabStripItem>
+    </TabStrip>
+
+    <TabContentItem>
+        <!-- This is the content of the first tab (Home) -->
+        <StackLayout>
+            <!-- TODO Add first jumbotron here -->
+            <ns-jumbotron title="Welcome to our store" description="Browse our collection of license plates"></ns-jumbotron>
+            <ScrollView orientation="vertical" row="1">
+                <StackLayout>
+                    <ns-license-plate *ngFor="let myPlate of licensePlates"  [plate]="myPlate" buttonText="Add to cart">
+
+                    </ns-license-plate>
+                </StackLayout>
+            </ScrollView>
+            <!-- TODO Add license plate component here -->
+        </StackLayout>
+
+     </TabContentItem>
+
+     <TabContentItem>
+         <!-- This is the content of the second tab (Cart) -->
+     </TabContentItem>
+
+     <TabContentItem>
+         <!-- This is the content of the third tab (Checkout) -->
+         <ns-jumbotron title="Checkout" description="Complete your order"></ns-jumbotron>
+     </TabContentItem>
+ </BottomNavigation>
