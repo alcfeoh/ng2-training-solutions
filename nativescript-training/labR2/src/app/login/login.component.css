@@ -1,0 +1,11 @@
+/* Add mobile styles for the component here.  */
+.form {
+    margin-left: 30;
+    margin-right: 30;
+    flex-grow: 2;
+    vertical-align: middle;
+}
+
+.input-field, .btn {
+    margin-top: 50px;
+}
